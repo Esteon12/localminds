@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+<link rel="stylesheet" href="style.css" />
+<title>LocalMind</title>
+</head>
+<body>
+<main>
+  <header>
+    <div><span class="dot" id="dot"></span><strong>LOCALMIND</strong></div>
+    <button class="ghost" onclick="openSystem()">SYSTEM</button>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">ON-DEVICE PERSONAL AI</div>
+    <h1>Telefonunda çalışan<br/>kişisel yapay zekâ.</h1>
+    <p id="status">Sistem kontrol ediliyor…</p>
+    <button id="modelBtn" onclick="pickModel()">GGUF MODEL SEÇ</button>
+  </section>
+
+  <section class="chat" id="chat"></section>
+
+  <section class="composer">
+    <textarea id="prompt" placeholder="Bir şey iste…" rows="1"></textarea>
+    <button class="send" onclick="send()">↑</button>
+  </section>
+
+  <section class="quick">
+    <button onclick="setPrompt('Bu uygulamanın mevcut arayüzünü değerlendir ve daha kullanışlı hale getirmek için değişiklik öner.')">Kendini geliştir</button>
+    <button onclick="showSource()">Kaynak kod</button>
+    <button onclick="rollback()">Geri al</button>
+  </section>
+</main>
+
+<div class="modal" id="systemModal">
+  <div class="sheet">
+    <button class="x" onclick="closeSystem()">×</button>
+    <h2>System</h2>
+    <pre id="sys"></pre>
+    <p class="muted">Runtime kodu uygulama çalışırken değiştirilebilir. Her değişiklikten önce otomatik snapshot alınır.</p>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

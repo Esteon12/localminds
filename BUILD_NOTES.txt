@@ -1,0 +1,2 @@
+Bu çalışma ortamında Android SDK / Gradle kurulu olmadığı için APK burada derlenemedi.
+Proje Android Studio'da açıldığında gerekli bağımlılıkları indirip APK üretmeye hazır olacak şekilde hazırlanmıştır.
